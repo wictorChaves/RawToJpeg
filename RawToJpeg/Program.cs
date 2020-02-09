@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ImageMagick;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,10 @@ namespace RawToJpeg
     {
         static void Main(string[] args)
         {
+            using (MagickImage image = new MagickImage("C:\\Users\\wictor\\Downloads\\IMG_2581.CR2"))
+            {
+                image.Write("C:\\Users\\wictor\\Downloads\\IMG_2581.jpg");
+            }
         }
     }
 }
